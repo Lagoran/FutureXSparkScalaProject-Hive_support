@@ -1,8 +1,13 @@
 package common
 
+import common.PostgresCommon.getClass
+import org.apache.log4j.spi.LoggerFactory
 import org.apache.spark.sql.SparkSession
 
 object SparkCommon {
+
+  private val Logger = LoggerFactory.getLogger(getClass.getName)
+
   def createSparkSession(): SparkSession = {
     // Create a Spark Session
     // For Windows

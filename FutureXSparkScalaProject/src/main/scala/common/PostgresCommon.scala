@@ -1,10 +1,15 @@
 package common
 
+import FutureXSparkTransformer.getClass
+import org.apache.log4j.spi.LoggerFactory
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 import java.util.Properties
 
 object PostgresCommon {
+
+  private val Logger = LoggerFactory.getLogger(getClass.getName)
+
   def PostgresCommonProp() : Properties = {
 
     println("getPostgresCommonProps method started")
